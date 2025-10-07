@@ -4,7 +4,7 @@ if(isset($_POST['cadastra'])){
     $nome  = mysqli_real_escape_string($conexao, $_POST['nome']);
     $email = mysqli_real_escape_string($conexao, $_POST['email']);
     $msg   = mysqli_real_escape_string($conexao, $_POST['msg']);
-    $sql = "INSERT INTO stoolsad (name, email, mensagem) VALUES ('$name', '$email', '$msg')";
+    $sql = "INSERT INTO Client (name, email, mensagem) VALUES ('$name', '$email', '$msg')";
     mysqli_query($conexao, $sql) or die("Erro ao inserir dados: " . mysqli_error($conexao));
     header("Location: mural.php");
     exit;
